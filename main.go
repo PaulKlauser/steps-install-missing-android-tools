@@ -235,10 +235,6 @@ func main() {
 		if err := os.Unsetenv("ANDROID_NDK_HOME"); err != nil {
 			failf("Failed to unset environment variable, error: %s", err)
 		}
-
-		if err := tools.ExportEnvironmentWithEnvman("ANDROID_NDK_HOME", ""); err != nil {
-			failf("Failed to set environment variable, error: %s", err)
-		}
 	}
 
 	// Initialize Android SDK
